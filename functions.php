@@ -9,3 +9,10 @@ register_nav_menu( 'header-nav' , 'ヘッダーメニューナビゲーション
 register_nav_menu( 'footer-nav-left' , 'フッターメニューナビゲーション（左）' );
 register_nav_menu( 'footer-nav-center' , 'フッターメニューナビゲーション（中）' );
 register_nav_menu( 'footer-nav-right' , 'フッターメニューナビゲーション（右）' );
+
+function cops_enqueue_scripts(){
+  wp_enqueue_script(
+    'custom-script', get_template_directory_uri().'/js/custom.js', array( 'jquery' )
+  );
+}
+add_action( 'wp_enqueue_scripts' , 'cops_enqueue_scripts' );
