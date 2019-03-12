@@ -20,10 +20,10 @@
     <button type="button" id="nav-button">
       <i class="fas fa-bars"></i>
     </button>
-  </div>
-  <div class="contact-information">
-    <p>住所：〇〇県〇〇市〇〇町123-123</p>
-    <p>電話：0120-123-456</p>
+    <div class="contact-information">
+      <p>住所：〇〇県〇〇市〇〇町</p>
+      <p>電話：0120-123-456</p>
+    </div>
   </div>
   <?php wp_nav_menu(array(
     'theme_location' => 'header-nav',
