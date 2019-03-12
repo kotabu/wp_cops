@@ -1,0 +1,78 @@
+/*
+Theme Name: Cops
+Theme URI: http://www.hogepon.com
+Description: Enterprise wordpress theme
+Author: Keshiyan
+Version: 1.0
+Lisence: GNU General Public License v2 or later
+Lisence URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+body {
+  font-family: 'メイリオ', 'Meiryo', 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'Noto Sans Japanese', Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.header-inner, .container, .footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  boxsizing: border-box;
+  -webkit-boxsizing: border-box;
+  -moz-boxsizing: border-box;
+}
+
+/*-- header --*/
+
+header {
+  height: 200px;
+}
+
+.header-inner:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.site-title {
+  float: left;
+  font-size: 1.5em;
+}
+
+.site-title img {
+  height: auto;
+  max-width: 300px;
+}
+
+.contact-information {
+  text-align: center;
+}
+
+.contact-information img {
+  height: auto;
+  max-width: 300px;
+}
+
+.header-nav ul {
+  display: block;
+  list-style: none;
+}
+
+.header-nav li {
+  display: block;
+  padding: 20px;
+  text-align: center;
+}
