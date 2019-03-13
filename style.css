@@ -215,6 +215,75 @@ button:focus {
   list-style-type: square;
 }
 
+/*-- contents --*/
+
+.contents h1 {
+  font-size: 1.5em;
+}
+
+.contents h2 {
+  font-size: 1.3em;
+  padding-left: 10px;
+  border-left: 5px solid #003459;
+  border-bottom: 1px solid #003459;
+  margin-top: 3em;
+}
+
+.contents h3 {
+  font-size: 1.2em;
+  padding-left: 5px;
+  border-left: 5px solid #007ea7;
+  margin-top: 2em;
+}
+
+.contents h4 {
+  margin-top: 1em;
+  font-size: 1.15em;
+}
+
+.contents h5 {
+  font-size: 1.1em;
+}
+
+.contents h6 {
+  font-size: 1.05em;
+}
+
+.contents table {
+  margin: 10px 30px;
+  padding: 5px;
+  border: 1px solid #e9e9e9;
+}
+
+.contents thead>tr {
+  background-color: #00171f;
+  color: #fff;
+}
+
+.contents td {
+  padding: 5px;
+}
+
+.contents pre {
+  overflow: scroll;
+}
+
+.contents tr:nth-child(even) {
+  background-color: #e9e9e9;
+}
+
+.contents blockquote {
+  padding: 10px;
+  margin: 20px 40px;
+  background-color: #e9e9e9;
+  opacity: 0.85;
+}
+
+.contents .article-date {
+  font-size: 0.8em;
+  display: block;
+}
+
 /*-- footer --*/
 
 footer {
@@ -243,6 +312,10 @@ footer {
   .swiper-container {
     height: 400px;
   }
+
+  .contents {
+    margin: 0 3em;
+  }
 }
 
 
@@ -251,6 +324,10 @@ footer {
 @media (max-width: 600px) {
   .swiper-container {
     height: 300px;
+  }
+
+  .contents {
+    margin: 0;
   }
 }
 
@@ -306,8 +383,8 @@ footer {
     border: 1px solid #00a8e8;
   }
   
-  .header-nav li {
-    min-width: 115px;
+  .header-nav>ul>li {
+    width: 13.3%;
     padding: 10px 5px;
     border: none;
   }
@@ -329,7 +406,8 @@ footer {
   }
 
   .header-nav ul>li>ul>li {
-    display: inline-block;
+    display: block;
+    padding: 10px;
   }
 
   .header-nav li:first-child {
@@ -372,6 +450,10 @@ footer {
   #notice {
     float: left;
     width: 49%;
+  }
+
+  .contents {
+    margin: 0 8em;
   }
 
   .footer-nav-container:after {
