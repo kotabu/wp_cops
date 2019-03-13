@@ -282,12 +282,12 @@ button:focus {
 
 .contents input, .contents textarea {
   padding: 5px;
+  width: 100%;
   border: 1px solid #e9e9e9;
   font-size: 1em;
 }
 
 .contents textarea {
-  width: 100%;
   font-size: 1em;
 }
 
