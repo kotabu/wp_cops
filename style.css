@@ -280,6 +280,26 @@ button:focus {
   display: block;
 }
 
+.contents input, .contents textarea {
+  padding: 5px;
+  border: 1px solid #e9e9e9;
+  font-size: 1em;
+}
+
+.contents textarea {
+  width: 100%;
+  font-size: 1em;
+}
+
+.contents input[type=submit] {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.contents input[type=submit]:hover {
+  opacity: 0.8;
+}
+
 /*-- pagination --*/
 
 .pagination ul {
