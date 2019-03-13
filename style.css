@@ -60,7 +60,7 @@ img {
 /*-- header --*/
 
 header {
-  height: 200px;
+  height: auto;
 }
 
 .header-inner {
@@ -178,6 +178,41 @@ button:focus {
 .swiper-container {
   width: 100%;
   height: 175px;
+  position: relative;
+}
+
+.slide-text {
+  opacity: 0.8;
+  padding: 5px;
+  background-color: rgba(0,0,0,0.8);
+  display: block;
+  width: 70%;
+  text-align: center;
+  font-size: 1.2em;
+  color: #fff;
+  position: absolute;
+  z-index: 900;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  -webkit-transform: translateY(-50%) translateX(-50%);
+}
+
+/*-- frontpage --*/
+
+.notice {
+  margin: 10px;
+}
+
+.notice h2 {
+  font-size: 1.2em;
+  padding-left: 10px;
+  border-left: 5px solid #003459;
+  border-bottom: 1px solid #003459;
+}
+
+.notice ul {
+  list-style-type: square;
 }
 
 /*-- footer --*/
@@ -202,9 +237,32 @@ footer {
   color: #fff;
 }
 
+/*-- tablet --*/
+
+@media (max-width: 767px) {
+  .swiper-container {
+    height: 400px;
+  }
+}
+
+
+/*-- mobile --*/
+
+@media (max-width: 600px) {
+  .swiper-container {
+    height: 300px;
+  }
+}
+
+@media (max-width: 420px) {
+  .swiper-container {
+    height: 190px;
+  }
+}
+
 /*-- pc --*/
 
-@media (min-width: 800px) {
+@media (min-width: 768px) {
 
   .header-inner {
     position: relative;
@@ -221,8 +279,10 @@ footer {
     top: 50%;
     padding: 0;
     height: auto;
+    width: 350px;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
+    text-align: left;
   }
   
   #header-nav {
@@ -259,10 +319,11 @@ footer {
   }
 
   .header-nav ul>li>ul {
-    background-color: #e9e9e9;
+    z-index: 1000;
+    background-color: #00171f;
     width: 100%;
     position: absolute;
-    top: 50px;
+    top: 99%;
     left: 0px;
     box-shadow: 0px 1px 1px gray;
   }
@@ -273,6 +334,44 @@ footer {
 
   .header-nav li:first-child {
     border-top: none;
+  }
+
+  .header-nav>ul>li {
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+  }
+
+  .header-nav>ul>li:hover {
+    background-color: #003459;
+  }
+
+  .header-nav>ul>li:hover a {
+    color: #fff;
+  }
+
+  .header-nav>ul>li:hover ul {
+    display: block;
+  }
+
+  .swiper-container {
+    height: 500px;
+  }
+
+  .notice:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  #latest-news {
+    float: left;
+    width: 49%;
+    margin-right: 2%;
+  }
+
+  #notice {
+    float: left;
+    width: 49%;
   }
 
   .footer-nav-container:after {

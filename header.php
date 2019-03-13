@@ -22,8 +22,8 @@
       <i class="fas fa-bars"></i>
     </button>
     <div class="contact-information">
-      <p>住所：〇〇県〇〇市〇〇町</p>
-      <p>電話：0120-123-456</p>
+    <p>住所：<?php echo get_option( 'main_address' ); ?></p>
+    <p>電話：<?php echo get_option( 'main_tellphone' ); ?></p>
     </div>
   </div>
   <?php wp_nav_menu(array(
