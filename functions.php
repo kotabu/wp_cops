@@ -12,6 +12,9 @@ register_nav_menu( 'footer-nav-right' , 'フッターメニューナビゲーシ
 
 function cops_enqueue_scripts(){
   wp_enqueue_script(
+    'swiper-script', get_template_directory_uri().'/js/swiper.min.js', array( 'jquery' )
+  );
+  wp_enqueue_script(
     'custom-script', get_template_directory_uri().'/js/custom.js', array( 'jquery' )
   );
 }

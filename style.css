@@ -173,6 +173,13 @@ button:focus {
   display: none;
 }
 
+/*-- slider --*/
+
+.swiper-container {
+  width: 100%;
+  height: 175px;
+}
+
 /*-- footer --*/
 
 footer {
