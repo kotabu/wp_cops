@@ -408,7 +408,7 @@ footer {
   }
   
   .mobile {
-    opacity: 0;
+    opacity: 0!important;
   }
 
   .slide-nav {
