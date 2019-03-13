@@ -93,11 +93,12 @@ header {
 
 .site-title img {
   height: auto;
-  max-width: 300px;
+  max-width: 170px;
 }
 
 button {
-  border: none;
+  border: 1px solid #e9e9e9;
+  border-radius: 5px;
   background: transparent;
   cursor: pointer;
 }
@@ -108,6 +109,7 @@ button:focus {
 
 #nav-button {
   position: absolute;
+  background-color: #e9e9e9;
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
@@ -117,6 +119,7 @@ button:focus {
 
 #nav-button i {
   font-size: 2em;
+  padding: 5px;
 }
 
 #nav-button:hover {
@@ -151,11 +154,11 @@ button:focus {
   display: block;
   padding: 20px;
   text-align: center;
-  border-bottom: 1px dotted #333;
+  border-bottom: 1px solid #e9e9e9;
 }
 
 .header-nav li:first-child {
-  border-top: 1px dotted #333;
+  border-top: 1px solid #e9e9e9;
 }
 
 .header-nav a {
@@ -320,6 +323,11 @@ footer {
 /*-- tablet --*/
 
 @media (max-width: 767px) {
+
+  .site-title img {
+    max-width: 250px;
+  }
+
   .swiper-container {
     height: 400px;
   }
@@ -333,16 +341,59 @@ footer {
 /*-- mobile --*/
 
 @media (max-width: 600px) {
+
+  .site-title {
+    font-size: 0.8em;
+  }
+
+  .site-title img {
+    max-width: 200px;
+  }
+
   .swiper-container {
     height: 300px;
   }
 
   .contents {
     margin: 0;
+    font-size: 0.9em;
+  }
+
+  .contents h1 {
+    font-size: 1.4em;    
+  }
+
+  .contents h2 {
+    font-size: 1.2em;
+  }
+
+  .contents h3 {
+    font-size: 1.15em;
+  }
+
+  .contents h4 {
+    font-size: 1.1em;
+  }
+
+  .contents h5 {
+    font-size: 1.05em;
+  }
+
+  .contents h6 {
+    font-size: 1em;
+  }
+
+  .contents blockquote {
+    margin: 20px 20px;
   }
 }
 
 @media (max-width: 420px) {
+
+  .site-title img {
+    max-width: 170px;
+  }
+
   .swiper-container {
     height: 190px;
   }
@@ -351,6 +402,10 @@ footer {
 /*-- pc --*/
 
 @media (min-width: 768px) {
+
+  .site-title img {
+    max-width: 300px;
+  }
   
   .mobile {
     opacity: 0;
@@ -428,6 +483,7 @@ footer {
   .header-nav ul>li>ul>li {
     display: block;
     padding: 10px;
+    border: none;
   }
 
   .header-nav li:first-child {
