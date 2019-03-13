@@ -15,9 +15,15 @@
 <header>
   <div class="header-inner">
     <div class="site-title">
+      <?php if( get_option( 'header_img' ) ): ?>
+      <h1><a href="<?php echo home_url(); ?>">
+      <img src="<?php echo get_option( 'header_img' ); ?>" alt="<?php bloginfo( 'name' ); ?>">
+      </a></h1>
+      <?php else: ?>
       <h1><a href="<?php echo home_url(); ?>">
         <?php bloginfo( 'name' ); ?>
       </a></h1>
+      <?php endif; ?>
     </div>
     <button type="button" id="nav-button">
       <i class="fas fa-bars"></i>

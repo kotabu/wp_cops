@@ -35,6 +35,9 @@ function main_theme_customize_register($wp_customize) {
   $wp_customize->add_setting( 'toggle_contact' , array(
     'type' => 'option',
   ) );
+  $wp_customize->add_setting( 'header_img' , array(
+    'type' => 'option',
+  ) );
   
   $wp_customize->add_control ( 'main_address' , array(
     'settings' => 'main_address',
@@ -54,6 +57,13 @@ function main_theme_customize_register($wp_customize) {
     'section' => 'main_setting',
     'type' => 'checkbox',
   ) );
+if( class_exists('WP_Customize_Image_Control') ):
+  $wp_customize->add_control ( new WP_Customize_Image_Control( $wp_customize, 'header_img', array(
+    'settings' => 'header_img',
+    'label' => 'サイトタイトルを画像にする',
+    'section' => 'main_setting',
+  ) ));
+endif;
 }
 add_action( 'customize_register' , 'main_theme_customize_register' );
 

@@ -126,7 +126,7 @@ button:focus {
 .slide-nav {
   position: absolute;
   display: none;
-  top: 0;
+  top: 30px;
   right: -250px;
   text-align: center;
 }
