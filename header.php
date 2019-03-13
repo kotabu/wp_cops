@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="ja">
 <head>
   <meta charset="utf-8">
@@ -22,11 +22,20 @@
     <button type="button" id="nav-button">
       <i class="fas fa-bars"></i>
     </button>
-    <div class="contact-information">
+    <?php if(get_option( 'toggle_contact' )): ?>
+    <div  class="contact-information pc">
     <p>住所：<?php echo get_option( 'main_address' ); ?></p>
     <p>電話：<?php echo get_option( 'main_tellphone' ); ?></p>
     </div>
+    <?php endif; ?>
   </div>
+  <div class="slide-nav">
+    <?php if(get_option( 'toggle_contact' )): ?>
+    <div class="contact-information mobile">
+    <p>住所：<?php echo get_option( 'main_address' ); ?></p>
+    <p>電話：<?php echo get_option( 'main_tellphone' ); ?></p>
+    </div>
+    <?php endif; ?>
   <?php wp_nav_menu(array(
     'theme_location' => 'header-nav',
     'container' => 'nav',
@@ -34,4 +43,5 @@
     'container_id' => 'header-nav',
     'fallback_cb' => ''  
   )); ?>
+  </div>
 </header>

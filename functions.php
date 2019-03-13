@@ -32,6 +32,9 @@ function main_theme_customize_register($wp_customize) {
   $wp_customize->add_setting( 'main_tellphone' , array(
     'type' => 'option',
   ) );
+  $wp_customize->add_setting( 'toggle_contact' , array(
+    'type' => 'option',
+  ) );
   
   $wp_customize->add_control ( 'main_address' , array(
     'settings' => 'main_address',
@@ -44,6 +47,12 @@ function main_theme_customize_register($wp_customize) {
     'label' => '表示する電話番号',
     'section' => 'main_setting',
     'type' => 'text',
+  ) );
+  $wp_customize->add_control ( 'toggle_contact' , array(
+    'settings' => 'toggle_contact',
+    'label' => '連絡先情報を表示する',
+    'section' => 'main_setting',
+    'type' => 'checkbox',
   ) );
 }
 add_action( 'customize_register' , 'main_theme_customize_register' );
@@ -97,6 +106,12 @@ function front_page_theme_customize_register($wp_customize) {
     'type' => 'option',
   ) );
   $wp_customize->add_setting( 'slide_text5' , array(
+    'type' => 'option',
+  ) );
+  $wp_customize->add_setting( 'toggle_latest_news' , array(
+    'type' => 'option',
+  ) );
+  $wp_customize->add_setting( 'toggle_notice' , array(
     'type' => 'option',
   ) );
 
@@ -187,5 +202,17 @@ if( class_exists('WP_Customize_Image_Control') ):
     'type' => 'text',
   ) );
 endif;
+  $wp_customize->add_control ( 'toggle_latest_news' , array(
+    'settings' => 'toggle_latest_news',
+    'label' => '最新ニュースを表示する',
+    'section' => 'front_page_custom',
+    'type' => 'checkbox',
+  ) );
+  $wp_customize->add_control ( 'toggle_notice' , array(
+    'settings' => 'toggle_notice',
+    'label' => 'お知らせを表示する',
+    'section' => 'front_page_custom',
+    'type' => 'checkbox',
+  ) );
 }
 add_action( 'customize_register' , 'front_page_theme_customize_register' );

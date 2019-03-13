@@ -14,6 +14,7 @@
       <div class="swiper-scrollbar"></div>
   </div>
   <div class="notice">
+    <?php if( get_option( 'toggle_latest_news' ) ): ?>
     <div id="latest-news">
       <h2>最新ニュース</h2>
       <?php 
@@ -37,6 +38,8 @@
       wp_reset_postdata();
       ?>
     </div>
+    <?php endif; ?>
+    <?php if( get_option( 'toggle_notice' ) ): ?>
     <div id ="notice">
       <h2>お知らせ</h2>
       <?php 
@@ -60,6 +63,7 @@
       wp_reset_postdata();
       ?>
     </div>
+    <?php endif; ?>
   </div>
 </div>
 <?php get_footer(); ?>

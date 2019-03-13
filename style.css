@@ -59,6 +59,10 @@ img {
 
 /*-- header --*/
 
+.pc {
+  display: none;
+}
+
 header {
   height: auto;
 }
@@ -92,17 +96,6 @@ header {
   max-width: 300px;
 }
 
-.contact-information {
-  padding: 45px 15px 0px 15px;
-  display: none;
-  height: 100px;
-  width: 200px;
-  position: absolute;
-  top: 0px;
-  right: -250px;
-  text-align: center;
-}
-
 button {
   border: none;
   background: transparent;
@@ -130,17 +123,22 @@ button:focus {
   opacity: 1;
 }
 
-#header-nav {
+.slide-nav {
+  position: absolute;
   display: none;
+  top: 0;
+  right: -250px;
+  text-align: center;
+}
+
+.contact-information {
+  width: 200px;
+  padding: 10px 30px;
 }
 
 .header-nav {
-  padding: 10px 15px;
   width: 200px;
-  height: auto;
-  position: absolute;
-  top: 170px;
-  right: -250px;
+  padding: 10px 30px;
 }
 
 .header-nav ul {
@@ -353,6 +351,15 @@ footer {
 /*-- pc --*/
 
 @media (min-width: 768px) {
+  
+  .mobile {
+    opacity: 0;
+  }
+
+  .slide-nav {
+    display: block!important;
+    position: static;
+  }
 
   .header-inner {
     position: relative;
