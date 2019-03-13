@@ -93,19 +93,14 @@ header {
 }
 
 .contact-information {
-  padding: 45px 15px 15px 15px;
+  padding: 45px 15px 0px 15px;
   display: none;
-  height: 139px;
+  height: 100px;
   width: 200px;
   position: absolute;
   top: 0px;
   right: -250px;
   text-align: center;
-}
-
-.contact-information img {
-  height: auto;
-  max-width: 100%;
 }
 
 button {
@@ -142,9 +137,9 @@ button:focus {
 .header-nav {
   padding: 10px 15px;
   width: 200px;
-  height: 100%;
+  height: auto;
   position: absolute;
-  top: 200px;
+  top: 170px;
   right: -250px;
 }
 
@@ -260,7 +255,7 @@ button:focus {
   color: #fff;
 }
 
-.contents td {
+.contents td, .contents th {
   padding: 5px;
 }
 
@@ -283,6 +278,24 @@ button:focus {
   font-size: 0.8em;
   display: block;
 }
+
+/*-- pagination --*/
+
+.pagination ul {
+  display: block;
+  list-style: none;
+}
+
+.pagination ul li {
+  display: inline-block;
+  border: 1px solid #e9e9e9;
+  padding: 5px;
+}
+
+.pagination ul li a {
+  text-decoration: none;
+}
+
 
 /*-- footer --*/
 

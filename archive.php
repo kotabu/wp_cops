@@ -22,6 +22,14 @@
         </li>
       </ul>
     <?php endwhile; endif; ?>
+    <div class="pagination">
+      <?php echo paginate_links(array( 
+        'type' => 'list',
+        'mid_size' => '1',
+        'prev_text' => '&laquo;',
+        'next_text' => '&raquo;'
+       ) ); ?>
+    </div>
   </div>
 </div>
 <?php get_footer(); ?>
