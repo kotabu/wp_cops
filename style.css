@@ -249,9 +249,14 @@ button:focus {
   margin: 10px 30px;
   padding: 5px;
   border: 1px solid #e9e9e9;
+  border-collapse: collapse;
 }
 
-.contents thead>tr {
+.contents tr:nth-child(odd) {
+  background-color: #e9e9e9;
+}
+
+.contents thead tr:nth-child(1) {
   background-color: #00171f;
   color: #fff;
 }
@@ -262,10 +267,6 @@ button:focus {
 
 .contents pre {
   overflow: scroll;
-}
-
-.contents tr:nth-child(even) {
-  background-color: #e9e9e9;
 }
 
 .contents blockquote {
